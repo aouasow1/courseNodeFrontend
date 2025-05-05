@@ -15,7 +15,7 @@ async function addSong() {
         username: localStorage.getItem("uname")
     }
 
-    const response = await fetch("https://kiwi-topaz-parakeet.glitch.me/api/songs", {
+    const response = await fetch("http://localhost:8080/api/songs", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"

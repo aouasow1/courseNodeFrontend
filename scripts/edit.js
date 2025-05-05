@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", async function() {
     const urlparam = new URLSearchParams(window.location.search)
     const songID = urlparam.get('id')
 
-    const response= await fetch("https://kiwi-topaz-parakeet.glitch.me/api/songs/" + songID)
+    const response= await fetch("http://localhost:8080/api/songs/" + songID)
 
     if (response.ok) {
         let song = await response.json()
@@ -30,7 +30,7 @@ async function updateSong() {
         genre: document.querySelector('#genre').value ? document.querySelector('#genre').value.split(',') : []
     }
 
-    const response= await fetch("https://kiwi-topaz-parakeet.glitch.me/api/songs/" + songID, {
+    const response= await fetch("http://localhost:8080/api/songs/" + songID, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

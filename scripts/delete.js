@@ -4,7 +4,7 @@ addEventListener('DOMContentLoaded', async function() {
 })
 
 async function getAllSong() {
-    const response = await fetch("https://kiwi-topaz-parakeet.glitch.me/api/songs/")
+    const response = await fetch("http://localhost:8080/api/songs/")
     if(response.ok) {
         const songs = await response.json()
         let html = ""
@@ -19,7 +19,7 @@ async function getAllSong() {
 async function deleteSong() {
     //get song id
     const songID = document.querySelector('#songDropDown option:checked').value
-    const response = await fetch("https://kiwi-topaz-parakeet.glitch.me/api/songs/" + songID, {
+    const response = await fetch("http://localhost:8080/api/songs/" + songID, {
         method:'DELETE'
     });
     if(response.ok) {

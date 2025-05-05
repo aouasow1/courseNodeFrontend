@@ -14,7 +14,7 @@ async function login(username, password) {
     }
 
     //send the login post request to the backend
-    const response = await fetch("https://kiwi-topaz-parakeet.glitch.me/api/auth/", {
+    const response = await fetch("https://35fb5a38-1a49-42a5-8e14-5144df04b00d-00-zsjc09syzutm.janeway.replit.dev/api/auth/", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"

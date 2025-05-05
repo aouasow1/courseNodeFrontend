@@ -1,7 +1,7 @@
 //we are going to make an event listener...it will trigger with the DOM is loaded (aka upon visiting page)
 
 addEventListener('DOMContentLoaded', async function() {
-    const response = await fetch('http://localhost:8080/api/songs')
+    const response = await fetch('https://kiwi-topaz-parakeet.glitch.me/api/songs')
     const songs =await response.json()
 
     let html = ''
